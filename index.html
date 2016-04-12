@@ -7,21 +7,24 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
 <script>
 $(function(){
-	var current = new Date();
-	console.log("current.getFullYear() = " + current.getFullYear());
-	console.log("current.getMonth() = " + current.getMonth());
-	console.log("current.getDate() = " + current.getDate());
-	console.log("current.getDay() = " + current.getDay());
-	console.log("current.getHours() = " + current.getHours());
-	console.log("current.getMinutes() = " + current.getMinutes());
-	console.log("current.getSeconds() = " + current.getSeconds());
+// 	var current = new Date();
+// 	console.log("current.getFullYear() = " + current.getFullYear());
+// 	console.log("current.getMonth() = " + current.getMonth());
+// 	console.log("current.getDate() = " + current.getDate());
+// 	console.log("current.getDay() = " + current.getDay());
+// 	console.log("current.getHours() = " + current.getHours());
+// 	console.log("current.getMinutes() = " + current.getMinutes());
+// 	console.log("current.getSeconds() = " + current.getSeconds());
 	
-	var current_date = current.getFullYear() + "-" +
-		("00" + (current.getMonth() + 1)).slice(-2)+ "-" +
-		("00" + current.getDate()).slice(-2) + " " +
-		("00" + current.getHours()).slice(-2) + ":" +
-		("00" + current.getMinutes()).slice(-2) + ":" +
-		("00" + current.getSeconds()).slice(-2);
+// 	var current_date = current.getFullYear() + "-" +
+// 		("00" + (current.getMonth() + 1)).slice(-2)+ "-" +
+// 		("00" + current.getDate()).slice(-2) + " " +
+// 		("00" + current.getHours()).slice(-2) + ":" +
+// 		("00" + current.getMinutes()).slice(-2) + ":" +
+// 		("00" + current.getSeconds()).slice(-2);
+
+	var m = moment();
+	var current_date = m.format("YYYY-MM-DD HH:mm:ss");
 		
 	$("#aaa").html(current_date);
 });
