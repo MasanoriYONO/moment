@@ -1,0 +1,34 @@
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.2/moment.min.js"></script>
+<script>
+$(function(){
+	var current = new Date();
+	console.log("current.getFullYear() = " + current.getFullYear());
+	console.log("current.getMonth() = " + current.getMonth());
+	console.log("current.getDate() = " + current.getDate());
+	console.log("current.getDay() = " + current.getDay());
+	console.log("current.getHours() = " + current.getHours());
+	console.log("current.getMinutes() = " + current.getMinutes());
+	console.log("current.getSeconds() = " + current.getSeconds());
+	
+	var current_date = current.getFullYear() + "-" +
+		("00" + (current.getMonth() + 1)).slice(-2)+ "-" +
+		("00" + current.getDate()).slice(-2) + " " +
+		("00" + current.getHours()).slice(-2) + ":" +
+		("00" + current.getMinutes()).slice(-2) + ":" +
+		("00" + current.getSeconds()).slice(-2);
+		
+	$("#aaa").html(current_date);
+});
+</script>
+<title>日時</title>
+</head>
+<body>
+<div id="aaa"></div>
+</body>
+</html>
