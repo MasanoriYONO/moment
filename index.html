@@ -27,11 +27,20 @@ $(function(){
 	var current_date = m.format("YYYY-MM-DD HH:mm:ss");
 		
 	$("#aaa").html(current_date);
+	
+	var now = moment();
+	var now_date = now.format("YYYY-MM-DD HH:mm:ss");
+	
+	$("#bbb").html(now_date);
+	
+	alert(m.isAfter(now));
+	alert(m.isBefore(now));
 });
 </script>
 <title>日時</title>
 </head>
 <body>
 <div id="aaa"></div>
+<div id="bbb"></div>
 </body>
 </html>
